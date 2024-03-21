@@ -63,10 +63,10 @@ BSP_MAIN_TYPE = Literal['1', '2', '3']
 
 
 class BSP_TYPE(Enum):
-    T1 = '1'
-    T1P = '1p'
+    T1 = '1' #中枢的笔out
+    T1P = '1p' #出来那笔不是笔out
     T2 = '2'
-    T2S = '2s'
+    T2S = '2s' #类二
     T3A = '3a'  # 中枢在1类后面
     T3B = '3b'  # 中枢在1类前面
 

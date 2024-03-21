@@ -8,3 +8,9 @@ config.yaml
 OpenConfig.yaml
 gotify_push.py
 cos_config.yaml
+*.csv
+*.pkl
+*.libsvm
+*.meta
+*.ipynb
+catboost_info

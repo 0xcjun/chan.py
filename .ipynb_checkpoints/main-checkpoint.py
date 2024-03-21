@@ -5,9 +5,9 @@ from Plot.AnimatePlotDriver import CAnimateDriver
 from Plot.PlotDriver import CPlotDriver
 
 if __name__ == "__main__":
-    code = "MANTAUSDT"
-    begin_time = "2024-01-19"
-    end_time = "2024-03-15"
+    code = "SUIUSDT"
+    begin_time = "2023-02-19"
+    end_time = "2024-03-14"
     data_src = DATA_SRC.CSV
     lv_list = [KL_TYPE.K_60M]
 
