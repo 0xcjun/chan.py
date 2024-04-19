@@ -24,7 +24,7 @@ def strategy_feature(last_klu):
 if __name__ == "__main__":
     code = "SUIUSDT"
     begin_time = "2018-01-01"
-    end_time = "2024-04-18"
+    end_time = "2024-03-15"
     data_src = DATA_SRC.CSV
     lv_list = [KL_TYPE.K_60M]
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=5, shuffle=False)
 
     # 使用CatBoost模型
-    with open('catboost_model.pkl', 'rb') as f:
+    with open('hist_gradient_boosting_model.pkl', 'rb') as f:
         model =  pickle.load(f)
 
     test_accuracy = accuracy_score(y_train, model.predict(X_train))

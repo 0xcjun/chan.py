@@ -6,10 +6,10 @@ from Plot.PlotDriver import CPlotDriver
 
 if __name__ == "__main__":
     code = "MANTAUSDT"
-    begin_time = "2024-01-19"
-    end_time = "2024-03-15"
-    data_src = DATA_SRC.CSV
-    lv_list = [KL_TYPE.K_60M]
+    begin_time = "2024-04-18"
+    end_time = "2024-04-19"
+    data_src = DATA_SRC.CCXT
+    lv_list = [KL_TYPE.K_15M,KL_TYPE.K_5M]
 
     config = CChanConfig({
         "bi_strict": True,
