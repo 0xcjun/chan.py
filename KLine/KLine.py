@@ -36,7 +36,10 @@ class CKLine(CKLine_Combiner[CKLine_Unit]):
 
     def get_klu_min_low(self) -> float:
         return min(x.low for x in self.lst)
-
+    
+    def get_klu_volume(self) -> float:
+        return sum(x.volume for x in self.lst)
+    
     def has_gap_with_next(self) -> bool:
         assert self.next is not None
         # 相同也算重叠，也就是没有gap

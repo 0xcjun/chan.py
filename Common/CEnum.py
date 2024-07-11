@@ -9,17 +9,30 @@ class DATA_SRC(Enum):
 
 
 class KL_TYPE(Enum):
-    K_1M = auto()
-    K_DAY = auto()
-    K_WEEK = auto()
-    K_MON = auto()
-    K_YEAR = auto()
-    K_5M = auto()
-    K_15M = auto()
-    K_30M = auto()
-    K_60M = auto()
-    K_3M = auto()
-    K_QUARTER = auto()
+    K_1S = 1
+    K_3S = 2
+    K_5S = 3
+    K_10S = 4
+    K_15S = 5
+    K_20S = 6
+    K_30S = 7
+    K_1M = 8
+    K_3M = 9
+    K_5M = 10
+    K_10M = 11
+    K_15M = 12
+    K_30M = 13
+    K_60M = 14
+    K_DAY = 15
+    K_WEEK = 16
+    K_MON = 17
+    K_QUARTER = 18
+    K_YEAR = 19
+    K_2DAY = 20
+    K_2m = 21
+    K_120m = 22
+    K_3h = 23
+    K_4h = 24
 
 
 class KLINE_DIR(Enum):
@@ -56,11 +69,11 @@ BSP_MAIN_TYPE = Literal['1', '2', '3']
 
 class BSP_TYPE(Enum):
     T1 = '1'
-    T1P = '1p'
+    T1P = '1p' #盘整背驰1买
     T2 = '2'
-    T2S = '2s'
-    T3A = '3a'  # 中枢在1类后面
-    T3B = '3b'  # 中枢在1类前面
+    T2S = '2s'  #类二买卖点
+    T3A = '3a'  # 中枢出现在1类后面的3类买卖点
+    T3B = '3b'  # 中枢出现在1类前面的3类买卖点
 
     def main_type(self) -> BSP_MAIN_TYPE:
         return self.value[0]  # type: ignore
