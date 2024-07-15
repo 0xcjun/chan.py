@@ -58,10 +58,10 @@ if __name__ == "__main__":
 
     请注意，demo训练预测都用的是同一份数据，这是不合理的，仅仅是为了演示
     """
-    code = "MANTAUSDT"
+    code = "BOMEUSDT"
     begin_time = "2018-01-01"
     end_time = "2024-03-15"
-    data_src = DATA_SRC.CSV
+    data_src = DATA_SRC.CCXT
     lv_list = [KL_TYPE.K_60M]
 
     config = CChanConfig({
