@@ -28,17 +28,17 @@ class ExchangeBinance(Exchange):
 
         # 设置是否使用代理
         if proxy != None and proxy["host"] != "":
-            params["proxies"] = {
-                "https": f"http://{proxy['host']}:{proxy['port']}",
-                "http": f"http://{proxy['host']}:{proxy['port']}",
+            params['proxies'] = {
+                'https': f"http://{proxy['host']}:{proxy['port']}",
+                'http': f"http://{proxy['host']}:{proxy['port']}",
             }
 
         # 设置是否设置交易 api
         if config.BINANCE_APIKEY != "":
-            params["apiKey"] = config.BINANCE_APIKEY
-            params["secret"] = config.BINANCE_SECRET
-
-        self.exchange = ccxt.binanceusdm(params)
+            params['apiKey'] = config.BINANCE_APIKEY
+            params['secret'] = config.BINANCE_SECRET
+        print(params)
+        self.exchange = ccxt.binance(params)
 
         self.db_exchange = ExchangeDB("currency")
 
@@ -216,12 +216,16 @@ class ExchangeBinance(Exchange):
                 )
                 * 1000
             )
-
+        params = {}
+        if start_date is not None:
+            params["startTime"] = start_date
+        if end_date is not None:
+            params["endTime"] = end_date
         kline = self.exchange.fetch_ohlcv(
             symbol=code,
             timeframe=frequency_map[frequency],
-            limit=1500,
-            params={"startTime": start_date, "endTime": end_date},
+            limit=5000,
+            params=params,
         )
         kline_pd = pd.DataFrame(
             kline, columns=["date", "open", "high", "low", "close", "volume"]

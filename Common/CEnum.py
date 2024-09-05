@@ -9,31 +9,30 @@ class DATA_SRC(Enum):
 
 
 class KL_TYPE(Enum):
-    K_1S = 1
-    K_3S = 2
-    K_5S = 3
-    K_10S = 4
-    K_15S = 5
-    K_20S = 6
-    K_30S = 7
-    K_1M = 8
-    K_3M = 9
-    K_5M = 10
-    K_10M = 11
-    K_15M = 12
-    K_30M = 13
-    K_60M = 14
-    K_DAY = 15
-    K_WEEK = 16
-    K_MON = 17
-    K_QUARTER = 18
-    K_YEAR = 19
-    K_2DAY = 20
-    K_2m = 21
-    K_120m = 22
-    K_3h = 23
-    K_4h = 24
-
+    K_1S = auto()
+    K_3S = auto()
+    K_5S = auto()
+    K_10S = auto()
+    K_15S = auto()
+    K_20S = auto()
+    K_30S = auto()
+    K_1M = auto()
+    K_2M = auto()
+    K_3M = auto()
+    K_5M = auto()
+    K_10M = auto()
+    K_15M = auto()
+    K_30M = auto()
+    K_60M = auto()
+    K_120M = auto()
+    K_3H = auto()
+    K_4H = auto()
+    K_DAY = auto()
+    K_2DAY = auto()
+    K_WEEK = auto()
+    K_MON = auto()
+    K_QUARTER = auto()
+    K_YEAR = auto()
 
 class KLINE_DIR(Enum):
     UP = auto()

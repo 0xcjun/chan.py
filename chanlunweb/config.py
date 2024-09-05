@@ -14,8 +14,10 @@ LOGIN_PWD = ''
 DATA_PATH = ".chanlun_web"
 
 # 代理服务器配置
-PROXY_HOST = ''
-PROXY_PORT = 7890
+PROXY_HOST = '127.0.0.1'
+PROXY_PORT = 53902
+# PROXY_HOST =''
+# PROXY_PORT =''
 
 # 数据库配置
 DB_TYPE = "sqlite"  # 支持  mysql 与 sqlite，如果是 sqlite 则只需填写 DB_DATABASE 即可

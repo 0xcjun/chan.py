@@ -2,7 +2,7 @@
 
 import time
 import datetime
- import fun
+import fun
 from  backtesting.base import Operation, Strategy
 from  backtesting.backtest_trader import BackTestTrader
 from  backtesting.backtest import BackTest

@@ -41,10 +41,10 @@ frequency_maps = {
         "y": KL_TYPE.K_YEAR,
 
         "2d": KL_TYPE.K_2DAY,
-        "2m": KL_TYPE.K_2m,
-        "120m": KL_TYPE.K_120m,
-        "3h": KL_TYPE.K_3h,
-        "4h": KL_TYPE.K_4h,
+        "2m": KL_TYPE.K_2M,
+        "120m": KL_TYPE.K_120M,
+        "3h": KL_TYPE.K_3H,
+        "4h": KL_TYPE.K_4H,
     }
 
            
@@ -183,13 +183,13 @@ class CL(ICL):
                     "bi_strict": True,
                     "trigger_step": True,
                     "skip_step": 0,
-                    "divergence_rate": float("inf"),
+                    "divergence_rate": 0.9,
                     "bsp2_follow_1": False,
                     "bsp3_follow_1": False,
-                    "min_zs_cnt": 0,
-                    "bs1_peak": False,
-                    "macd_algo": "peak",
-                    "bs_type": '1,2,3a,1p,2s,3b',
+                    "min_zs_cnt": 1,
+                    # "bs1_peak": False,
+                    "macd_algo": "slope",
+                    # "bs_type": '1,2,3a,1p,2s,3b',
                     "print_warning": True,
                     "zs_algo": "normal",
                 })
